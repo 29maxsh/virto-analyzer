@@ -31,15 +31,15 @@ final public class TrendUpdater {
 
     public static void updateTrends(List<String> realms) throws IOException, GitAPIException {
         //обновляем
-        final Git git = RetailSalePrediction.fetchAndHardReset();
-
-        for (final String realm : realms) {
-            updateTrends(git, realm);
-        }
-        //публикуем на сайте
-        GitHubPublisher.publishTrends(git, realms);
-        //gc
-        GitHubPublisher.repackRepository();
+//         final Git git = RetailSalePrediction.fetchAndHardReset();
+//
+//         for (final String realm : realms) {
+//             updateTrends(git, realm);
+//         }
+//         //публикуем на сайте
+//         GitHubPublisher.publishTrends(git, realms);
+//         //gc
+//         GitHubPublisher.repackRepository();
     }
 
     public static void updateTrends(final Git git, final String realm) throws IOException, GitAPIException {
